@@ -1,91 +1,46 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from './page.module.css'
+"use client";
 
-const inter = Inter({ subsets: ['latin'] })
+import { motion } from "framer-motion";
+
+const transition = { duration: 1.2, ease: [0.6, 0.01, 0.02, 0.9] };
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
+    <main className="w-full h-screen flex justify-center items-center flex-col px-2">
+      <div className="h-full w-full blur-md opacity-20 bg-white bg-gradient-radial absolute -z-10" />
+      <div className="flex flex-col justify-center md:items-start items-center">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={transition}
+          className="flex items-center justify-center md:justify-start"
         >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
+          <h1 className="font-bold text-sm md:text-md text-gray-400">
+            Majed Al-Otaibi
+          </h1>
+          <span className="w-10 bg-gray-400 h-[2px] mx-2 rounded-lg" />
+          <h1 className="font-bold text-sm md:text-md text-gray-400">
+            Software Engineer
+          </h1>
+        </motion.div>
+        <motion.h1
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ ...transition, delay: 0.2 }}
+          className="font-semibold text-lg md:text-2xl text-center"
         >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
+          Software engineering mainly focus on build magical things! ✨
+        </motion.h1>
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ ...transition, delay: 0.4 }}
         >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+          <motion.button className="bg-white hover:bg-black transition-all hover:text-white hover:scale-110 active:scale-95 p-1 px-2 rounded-lg border-black  font-bold border-[2px] hover:shadow-lg">
+            Download Cv
+          </motion.button>
+        </motion.div>
       </div>
     </main>
-  )
+  );
 }
