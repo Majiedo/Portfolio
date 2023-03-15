@@ -8,7 +8,13 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(at 75% 22%, rgb(139, 92, 246) 0, transparent 100%), radial-gradient(at 12% 32%, rgb(51, 65, 85) 0, transparent 87%), radial-gradient(at 64% 49%, rgb(5, 150, 105) 0, transparent 98%);'
+        'hero-pattern': `url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.01'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");`,
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops) 80%)',
+      },
+      colors: {
+        primary: "#1A1A1A",
+        secondary: "#737373",
+        activeColor: "#b3b3b3"
       }
     },
   },
