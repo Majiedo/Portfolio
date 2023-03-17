@@ -8,10 +8,14 @@ export const Contact = () => {
       <h1 className="text-4xl w-2/3 md:w-2/6 text-center mt-2 bg-gradient-to-r bg-clip-text text-transparent from-white to-secondary">
         Tell me about your next project
       </h1>
-      <button className="bg-primary px-6 py-4 flex items-center hover:scale-105 active:scale-95 transition-all font-bold cursor-pointer rounded-md mt-4 hover:text-activeColor text-secondary">
+
+      <a
+        href="mailto:82qill@gmail.com"
+        className="bg-primary px-6 py-4 flex items-center hover:scale-105 active:scale-95 transition-all font-bold cursor-pointer rounded-md mt-4 hover:text-activeColor text-secondary"
+      >
         <p className="mr-2">Get In Touch</p>
         <HiOutlineMail size={15} color="#737373" />
-      </button>
+      </a>
     </div>
   );
 };
